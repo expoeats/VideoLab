@@ -55,7 +55,7 @@
 		ADD7B28B1DBFCA0D95378F31B7EE181A /* VideoCompositor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756BF17E9754F322C9ED1D82DE95B4B5 /* VideoCompositor.swift */; };
 		B36FDC22CED54953CDCBAD205CD68F56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		B8E15D25DD6806DC4585EFD229DDCEE4 /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CA07B2E3CE6C535B7D9057E90CA517 /* ImageSource.swift */; };
-		BA2BBB0E2762AD3C004376BB /* Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2BBB0D2762AD3C004376BB /* Speed.swift */; };
+		BA2BBB102763ACCE004376BB /* Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2BBB0F2763ACCE004376BB /* Speed.swift */; };
 		BA79FEA092AA64C15D6E93C21E87FE44 /* RenderComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE036C491B59D90AA4AD3CF95A17BB2 /* RenderComposition.swift */; };
 		C4D6D2371B54B90F96F9B3565DB61E0C /* TextAnimationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B9AF333B0ADC07A35D9B273EBCD83E2 /* TextAnimationLayer.swift */; };
 		C4EF5EF700D1B65676B7D48724136BE9 /* Passthrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155BB109D17B69E103DB2422CBC43EF4 /* Passthrough.metal */; };
@@ -146,7 +146,7 @@
 		B01F60807C0955D79478D6B89897474B /* OperationShaderTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OperationShaderTypes.h; sourceTree = "<group>"; };
 		B0BBBCBF9ED5B8A0DCFBD292244ACD45 /* VideoLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VideoLab.debug.xcconfig; sourceTree = "<group>"; };
 		B155ED92B5A077E06FA9B1AC9672DC6F /* Pods-VideoLab_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VideoLab_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BA2BBB0D2762AD3C004376BB /* Speed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speed.swift; sourceTree = "<group>"; };
+		BA2BBB0F2763ACCE004376BB /* Speed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Speed.swift; path = VideoLab/Speed.swift; sourceTree = "<group>"; };
 		BB8E9FBF60F2E40A03648EDBD643CFFD /* LookupFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LookupFilter.swift; sourceTree = "<group>"; };
 		C5C0ECFB4BF75AF6C3E314561E60A6EC /* BasicOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BasicOperation.swift; sourceTree = "<group>"; };
 		CC3424A32DB9D6FB35271F03EA19470D /* VideoLab.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = VideoLab.modulemap; sourceTree = "<group>"; };
@@ -386,7 +386,7 @@
 				EAD85B5D009B0C1542BF7DF509463336 /* AudioConfiguration.swift */,
 				188E42EF87C690489C4C4D71ADEB314C /* KeyframeAnimation.swift */,
 				AD18EBA1246692AB897C3347D94D9738 /* TimingFunction.swift */,
-				BA2BBB0D2762AD3C004376BB /* Speed.swift */,
+				BA2BBB0F2763ACCE004376BB /* Speed.swift */,
 				42288C6BC75A29E1B9CA047CCA31B04A /* Source */,
 				CB595AD30245965E7A6B81C6A0A569F7 /* Audio */,
 				50361809E50852DB94874E467B1FF5B7 /* Text */,
@@ -629,7 +629,7 @@
 				45414D0A3630FA094619019327C038B5 /* Transform.swift in Sources */,
 				E99D61B3A8C7D3475405C40359027282 /* VideoCompositionInstruction.swift in Sources */,
 				ADD7B28B1DBFCA0D95378F31B7EE181A /* VideoCompositor.swift in Sources */,
-				BA2BBB0E2762AD3C004376BB /* Speed.swift in Sources */,
+				BA2BBB102763ACCE004376BB /* Speed.swift in Sources */,
 				56EF466572883EBBA788D369DE9252F3 /* VideoLab-dummy.m in Sources */,
 				559026D63970C3F5B2F4ECD21BB57ADC /* VideoLab.swift in Sources */,
 				AC898A4F2814FFE916EEBE432E8C07C0 /* VideoRenderLayer.swift in Sources */,
