@@ -12,11 +12,11 @@ public enum Speed: Int {
     
     var multiplier: Double {
         switch self {
-        case .veryFast: return 3.0
-        case .fast:  return 2.0
+        case .veryFast: return 0.3
+        case .fast:  return 0.5
         case .regular: return 1
-        case .slow: return 0.5
-        case .verySlow: return 0.3
+        case .slow: return 2.0
+        case .verySlow: return 3.0
         }
     }
 }
