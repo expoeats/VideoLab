@@ -40,7 +40,11 @@ class AudioRenderLayer {
         
         if let compositionTrack = compositionTrack {
             do {
-                try compositionTrack.insertTimeRange(source.selectedTimeRange, of:assetTrack , at: timeRangeInTimeline.start)
+                try compositionTrack.insertTimeRange(source.selectedTimeRange, of: assetTrack, at: timeRangeInTimeline.start)
+                compositionTrack.scaleTimeRange(CMTimeRange(start: timeRangeInTimeline.start,
+                                                            duration: source.selectedTimeRange.duration),
+                                                toDuration: CMTimeMultiplyByFloat64(source.selectedTimeRange.duration,
+                                                                                    multiplier: renderLayer.speed.multiplier))
             } catch {
                 // TODO: handle Error
             }

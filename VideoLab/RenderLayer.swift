@@ -16,6 +16,7 @@ public class RenderLayer: Animatable {
     public var blendMode: BlendMode = BlendModeNormal
     public var blendOpacity: Float = 1.0
     public var operations: [BasicOperation] = []
+    public var speed: Speed = .regular
     
     public var audioConfiguration: AudioConfiguration = AudioConfiguration()
     
