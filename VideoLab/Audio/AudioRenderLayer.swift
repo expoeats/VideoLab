@@ -15,12 +15,12 @@ class AudioRenderLayer {
     var trackID: CMPersistentTrackID = kCMPersistentTrackID_Invalid
     var timeRangeInTimeline: CMTimeRange
     var pitchAlgorithm: AVAudioTimePitchAlgorithm? {
-        return renderLayer.audioConfiguration.pitchAlgorithm
+        renderLayer.audioConfiguration.pitchAlgorithm
     }
 
     init(renderLayer: RenderLayer) {
         self.renderLayer = renderLayer
-        timeRangeInTimeline = renderLayer.timeRange
+        self.timeRangeInTimeline = renderLayer.timeRange
     }
     
     func addAudioTrack(to composition: AVMutableComposition, preferredTrackID: CMPersistentTrackID) {
@@ -40,11 +40,13 @@ class AudioRenderLayer {
         
         if let compositionTrack = compositionTrack {
             do {
-                try compositionTrack.insertTimeRange(source.selectedTimeRange, of: assetTrack, at: timeRangeInTimeline.start)
-                compositionTrack.scaleTimeRange(CMTimeRange(start: timeRangeInTimeline.start,
-                                                            duration: source.selectedTimeRange.duration),
-                                                toDuration: CMTimeMultiplyByFloat64(source.selectedTimeRange.duration,
-                                                                                    multiplier: renderLayer.speed.multiplier))
+                let scaledDuration = renderLayer.speed.scale(duration: source.selectedTimeRange.duration)
+                let timeRange = CMTimeRangeMake(start: .zero, duration: source.selectedTimeRange.duration)
+                try compositionTrack.insertTimeRange(timeRange, of: assetTrack, at: timeRangeInTimeline.start)
+                compositionTrack.scaleTimeRange(timeRange, toDuration: scaledDuration)
+                
+                // Update the time range in case it changed
+                timeRangeInTimeline = CMTimeRangeMake(start: timeRangeInTimeline.start, duration: scaledDuration)
             } catch {
                 // TODO: handle Error
             }
