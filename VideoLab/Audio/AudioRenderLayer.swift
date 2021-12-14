@@ -41,7 +41,7 @@ class AudioRenderLayer {
         if let compositionTrack = compositionTrack {
             do {
                 let scaledDuration = renderLayer.speed.scale(duration: source.selectedTimeRange.duration)
-                let timeRange = CMTimeRangeMake(start: .zero, duration: source.selectedTimeRange.duration)
+                let timeRange = source.selectedTimeRange
                 try compositionTrack.insertTimeRange(timeRange, of: assetTrack, at: timeRangeInTimeline.start)
                 compositionTrack.scaleTimeRange(timeRange, toDuration: scaledDuration)
                 
