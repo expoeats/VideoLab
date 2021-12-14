@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'VideoLab'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'High-performance and flexible video editing and effects framework, based on AVFoundation and Metal.'
   s.description      = <<-DESC
   High-performance and flexible video editing and effects framework, based on AVFoundation and Metal.
